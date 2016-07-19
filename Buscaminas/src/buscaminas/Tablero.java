@@ -3,54 +3,42 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//Importes
 package buscaminas;
+//Importes
+import java.util.Random;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Luis Alonso
- * @author Lissa Elena astro Barquero
+ * @author Lissa Elena Castro Barquero
  * @date 2016-07-10 Domingo
  **/
 public class Tablero {
-    private String tablero [][];
     private int minas [][];
     private boolean elegidos [][];
-    private int filas = 3;
-    private int columnas = 5;
-    //
-    public Tablero(String[][] tablero, int[][] minas, boolean[][] elegidos) {
-        this.tablero = tablero;
-        this.minas = minas;
-        this.elegidos = elegidos;
-    }
-    public void setTablero(String[][] tablero) {
-        this.tablero = tablero;
-    }
-    public void setMinas(int[][] minas) {
-        this.minas = minas;
-    }
-    public void setElegidos(boolean[][] elegidos) {
-        this.elegidos = elegidos;
-    }
-    public void setFilas(int filas) {
-        this.filas = filas;
-    }
-    public void setColumnas(int columnas) {
-        this.columnas = columnas;
-    }
-    public String[][] getTablero() {
-        return tablero;
-    }
-    public int[][] getMinas() {
-        return minas;
-    }
-    public boolean[][] getElegidos() {
-        return elegidos;
-    }
-    public int getFilas() {
-        return filas;
-    }
-    public int getColumnas() {
-        return columnas;
-    }  
+    private final int filas ;
+    private final int columnas;
+    /**
+     *Metodo para crear el tablero
+     */
+     public int tablero [][] = new int[0][0]; {
+         filas=Integer.parseInt(JOptionPane.showInputDialog("Ingrese numero de Filas"));
+         columnas=Integer.parseInt(JOptionPane.showInputDialog("Ingrese numero de columnas"));  
+        for (int i = 0; i < filas; i++) {
+            for (int j = 1; j < columnas; j++) {
+                System.out.print("[ ]");
+            }
+            System.out.println("[ ]");
+               int matriz[][] = new int[0][0];
+		int r=0;		
+		Random rnd= new Random();{		
+		for (int o=0; i < 0; i++){
+		{
+			for (int j=0; j < 0; j++)
+				matriz[i][j] = rnd.nextInt(25)+1;			
+		}
+        }
+        }
+        }
+}    
 }

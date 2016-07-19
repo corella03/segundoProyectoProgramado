@@ -3,12 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//Importes
 package buscaminas;
 /**
  *
  * @author Luis Alonso
- * @author Lissa Elena astro Barquero
+ * @author Lissa Elena Castro Barquero
  * @date 2016-07-10 Domingo
  **/
 public class Buscaminas {
@@ -17,6 +16,8 @@ public class Buscaminas {
      */
     public static void main(String[] args) {
        Juego buscaMinas=new Juego();
-       buscaMinas.menu();      
+       buscaMinas.menu();
+//       Juego jg =new Juego();
+  //     jg.Jugar();
     }
 }
