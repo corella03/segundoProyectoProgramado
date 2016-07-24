@@ -14,12 +14,26 @@ import javax.swing.JOptionPane;
  **/
 public class Juego {
     int opciones;
+
+    public Juego(int opciones) {
+        this.opciones = opciones;
+    }
+
+    Juego() {
+    }
+    
     /**
      *
      */
     public void  menu () {
-        do{
-    opciones=Integer.parseInt(JOptionPane.showInputDialog("Menu \n1Jugar \n2.Salir"));
+    Object obj= JOptionPane.showInputDialog("Menu \n1Jugar \n2.Salir");
+    if(obj==null)
+        return;
+    if(obj.toString().equals("")){
+        JOptionPane.showMessageDialog(null, "Sea bruto");
+        menu();}
+    else{
+    opciones=Integer.parseInt((String) obj);
     switch(opciones){
     case 1:
             System.out.println("================================");
@@ -33,8 +47,8 @@ public class Juego {
         break;
         case 2:      
         break;
-    } 
-   } while (opciones!=2);
+    } }
+ //  } while (opciones!=2);
       } 
      //   public void Jugar(){ 
     //}

@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+//Paquete
 package buscaminas;
 /**
  *
@@ -15,7 +16,7 @@ public class Buscaminas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       Juego buscaMinas=new Juego();
+       Juego buscaMinas = new Juego();
        buscaMinas.menu();
 //       Juego jg =new Juego();
   //     jg.Jugar();
