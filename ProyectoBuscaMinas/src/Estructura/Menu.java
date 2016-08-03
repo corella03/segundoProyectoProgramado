@@ -3,53 +3,42 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package buscaminas;
+//Paquete
+package Estructura;
 //Importes
 import javax.swing.JOptionPane;
 /**
- *
- * @author Luis Alonso
- * @author Lissa Elena Castro Barquero
- * @date 2016-07-10 Domingo
+ **
+ ** @author Luis Alonso & Lissa Elena Castro Barquero
+ ** @date 2016-07-10 Domingo
  **/
-public class Juego {
-    int opciones;
-
-    public Juego(int opciones) {
-        this.opciones = opciones;
-    }
-
-    Juego() {
-    }
-    
-    /**
-     *
-     */
+public class Menu {
     public void  menu () {
-    Object obj= JOptionPane.showInputDialog("Menu \n1Jugar \n2.Salir");
+        int opciones;
+    Object obj= JOptionPane.showInputDialog("Menu \n1Jugar \n2.Salir");//porque no se sabe que devuelve el JOption
     if(obj==null)
         return;
     if(obj.toString().equals("")){
-        JOptionPane.showMessageDialog(null, "Sea bruto");
+        JOptionPane.showMessageDialog(null, "No ingresaste ningun digito");
         menu();}
     else{
     opciones=Integer.parseInt((String) obj);
-    switch(opciones){
-    case 1:
+        switch(opciones){
+        case 1:
             System.out.println("================================");
             System.out.println("         JUEGO BUSCA MINA       ");
             System.out.println("================================");
             System.out.println("             EXITOS             ");
             System.out.println("================================"); 
             System.out.println("A jugar ¯\\_(ツ)_/¯");
-            Tablero tb = new Tablero(); 
+            Logica tb = new Logica();
+            int[][] tablero=tb.crearTablero();;//pide el tamañao del tablero y crea una matriz cuadrada con 0s del tamaño seleccionado
+            tb.llenarMinas();
+            tb.imprimirTablero();           
+            //System.out.println(tablero[0][0]);    
+        //break;
 
-        break;
-        case 2:      
-        break;
-    } }
- //  } while (opciones!=2);
-      } 
-     //   public void Jugar(){ 
-    //}
+        } 
+    }
+    }
 }

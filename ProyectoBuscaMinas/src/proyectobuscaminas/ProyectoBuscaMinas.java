@@ -4,21 +4,19 @@
  * and open the template in the editor.
  */
 //Paquete
-package buscaminas;
+package proyectobuscaminas;
 /**
- *
- * @author Luis Alonso
- * @author Lissa Elena Castro Barquero
- * @date 2016-07-10 Domingo
+ **
+ ** @author Luis Alonso & Lissa Elena Castro Barquero
+ ** @date 2016-07-10 Domingo
  **/
-public class Buscaminas {
+public class ProyectoBuscaMinas {
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       Juego buscaMinas = new Juego();
-       buscaMinas.menu();
-//       Juego jg =new Juego();
-  //     jg.Jugar();
-    }
+        // TODO code application logic here
+      Estructura.Menu m= new Estructura.Menu();
+      m.menu();
+    }   
 }
