@@ -14,31 +14,26 @@ import javax.swing.JOptionPane;
  **/
 public class Menu {
     public void  menu () {
-        int opciones;
-    Object obj= JOptionPane.showInputDialog("Menu \n1Jugar \n2.Salir");//porque no se sabe que devuelve el JOption
-    if(obj==null)
-        return;
-    if(obj.toString().equals("")){
-        JOptionPane.showMessageDialog(null, "No ingresaste ningun digito");
-        menu();}
-    else{
-    opciones=Integer.parseInt((String) obj);
-        switch(opciones){
+        try{
+      int opciones;
+      int desicion;
+      int x;
+      int y;
+    opciones = Integer.parseInt(JOptionPane.showInputDialog("Menu \n1Jugar \n2.Salir"));
+    switch(opciones){
         case 1:
             System.out.println("================================");
             System.out.println("         JUEGO BUSCA MINA       ");
             System.out.println("================================");
             System.out.println("             EXITOS             ");
             System.out.println("================================"); 
-            System.out.println("A jugar ¯\\_(ツ)_/¯");
+            System.out.println("A jugar ¯\\_(ツ)_/¯");           
             Logica tb = new Logica();
             int[][] tablero=tb.crearTablero();;//pide el tamañao del tablero y crea una matriz cuadrada con 0s del tamaño seleccionado
-            tb.llenarMinas();
-            tb.imprimirTablero();           
-            //System.out.println(tablero[0][0]);    
-        //break;
-
-        } 
+           
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
-    }
+}
 }
