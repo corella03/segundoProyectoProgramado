@@ -17,6 +17,9 @@ public class ProyectoBuscaMinas {
     public static void main(String[] args) {
         // TODO code application logic here
       Estructura.Menu m= new Estructura.Menu();
-      m.menu();
+      boolean respuesta=m.menu();//para que los menus no se llamen dentro de si mismos y se pueda cancelar una otra y vez
+      if(respuesta){
+        m.menu();
+      }
     }   
 }
