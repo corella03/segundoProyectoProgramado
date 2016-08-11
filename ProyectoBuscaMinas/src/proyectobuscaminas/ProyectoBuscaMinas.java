@@ -16,10 +16,12 @@ public class ProyectoBuscaMinas {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        //Instancia del paquete Estructura y la clase Menu
       Estructura.Menu m= new Estructura.Menu();
-      boolean respuesta=m.menu();//para que los menus no se llamen dentro de si mismos y se pueda cancelar una otra y vez
+      //Llamada al método del paquete Estructura y la clase Menu
+      boolean respuesta=m.menu();//Para que los menus no se llamen dentro de si mismos y se pueda cancelar una otra y vez
       if(respuesta){
         m.menu();
       }
-    }   
-}
+    } //Fin del main [] 
+}//Fin de la CLase()
